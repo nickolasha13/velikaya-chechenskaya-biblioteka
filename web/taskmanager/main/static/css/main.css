@@ -1,0 +1,85 @@
+/* Обнуление */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  /* Тёмно серый */
+  --primary: rgba(48,56,65,255);
+
+  /* Серый */
+  --secondary: rgba(58,71,80,255);
+
+   /* цвет текста */
+   --font-color: #fff;
+
+   --href-hover-color: rgba(238,238,238,255);
+
+   --violet: rgba(121, 99, 243);
+
+   /* Жёлтый */
+  --yellow: rgba(255, 232, 0, 0.85);
+
+  /* Оранжевый */
+  --orange: rgba(255, 135, 0);
+
+  /* footer colors */
+
+ --light-violet: rgba(212, 203, 243, 255);
+
+ --light-blue: rgba(183, 233, 255, 255);
+}
+
+.light__theme {
+  --primary: #333;
+
+  --secondary: #333;
+
+  --font-color: #000;
+
+  --href-hover-color: rgba(183, 207, 205, 0.50);
+}
+
+
+/* } */
+
+.mini-image {
+  height: 90px;
+}
+
+.page__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 1 auto;
+  /* height: 200vh; */
+}
+
+/* scrollTopButton */
+
+.scrollUp {
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  color: var(--blue);
+  position: fixed;
+  z-index: 50;
+  bottom: 0;
+  right: 0;
+  display: none;
+  cursor: pointer;
+}

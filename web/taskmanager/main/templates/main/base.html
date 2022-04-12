@@ -1,61 +1,146 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+  <!-- Base settings -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" /> -->
+
+  <!-- Icons and fonts -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css" integrity="sha384-ejwKkLla8gPP8t2u0eQyL0Q/4ItcnyveF505U0NIobD/SMsNyXrLti6CWaD0L52l" crossorigin="anonymous">
-  <link rel="stylesheet" href="static/main.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles - main -->
+  <link rel="stylesheet" href="static\css\main.css">
+
+  <!-- Styles - header and navbar -->
+  <link rel="stylesheet" href="static\css\header.css">
+
+  <!-- Styles - footer and copyright -->
+  <link rel="stylesheet" href="static\css\footer.css">
+
+  <!-- Scripts - main -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <script src="static\js\main__query.js" type="text/javascript" ></script>
+
+
+  <!-- Styles - page styles -->
+  <!-- {% block styles %}{% endblock %} -->
+  <!-- <link rel="stylesheet" href="static\css\login-registration_form.css"> -->
+
+  <!-- Scripts - page scripts -->
+  <!-- {% block scripts %}{% endblock %} -->
+
+  <!-- additional scripts -->
+  <script src="static\form__validation.js" defer></script>
+  <!-- Title and icon -->
   <title>Главная страница</title>
+  <link rel="shortcut icon" type="image/ico" href="static/img/favicon.ico">
 </head>
 <body>
   <div class="wrapper">
     <header class="header">
+      <div class="header__container">
+        <div class="header__body">
+          <a href="#" class="header__logo"><img class="mini-image" src="static\img\logo-2.png" alt="LOGO"></a>
+          <a href="#" class="header__logo mobile__logo"><img class="mini-image" src="static\img\mobile-logo.png" alt="LOGO"></a>
 
-      <a href="#" class="logo"><img src="static/img/logo.png" alt="Библиотека" class="logo"></a>
+          <div class="header__burger">
+            <span></span>
+          </div>
 
-      <ul class="navigation">
-        <li class="nav-element"><a href="" class="nav-element">Item</a></li>
-        <li class="nav-element"><a href="" class="nav-element">Item</a></li>
-        <li class="nav-element"><a href="" class="nav-element">Item</a></li>
-        <li class="nav-element"><a href="" class="nav-element">Itemf</a></li>
-      </ul>
+          <nav class="header__menu">
 
-      <!-- Условие типа если юзер авторизован - показывается кнопка профиля иначе кнопка регистрации/авторизации -->
+            <ul class="header__list">
+              <li>
+                <a href="" class="header__link">Персонажи</a>
+              </li>
+              <li>
+                <a href="" class="header__link">Оружия</a>
+              </li>
+              <li>
+                <a href="" class="header__link">П. инфа</a>
+              </li>
+              <li>
+                <a href="" class="header__link">Калькулятор</a>
+              </li>
+              <li class="only__mobile__menu__link header__link">
+                <div class="change__theme">
+                  <div class="theme__changer">
+                    <i class="bi bi-moon"></i>
+                  </div>
+                </div>
+              </li>
+              <li class="only__mobile__menu__link header__link">
+                  <a href="" class="header__link">Язык</a>
+              </li>
+              <li class="only__mobile__menu__link header__link">
+                  <a href="" class="header__link">Профиль</a>
+              </li>
 
-      <div class="accounts">
-        <button class="reg accounts"><a href="#" class="reg accounts">Регистрация</a></button>
-        <button class="auth accounts"><a href="#" class="auth accounts">Авторизация</a></button>
+            </ul>
+            <div class="menu__settings" id="menu__settings">
+                <a href="" id="settings__block"><i class="bi bi-gear"></i></a>
+            </div>
+          </nav>
 
-        <button class="profile accounts"><a href="#" class="profile accounts">Мой Профиль</a></button>
+        </div>
       </div>
     </header>
-  <main class="main">
+    <main class="content">
+      <!-- Settings menu -->
+      <div id="aside__settings" class="settings__aside">
+        <div class="settings" id="settings">
+          <div class="hidden__menu">
+            <div class="menu__content">
+              <ul>
+            <li class="header__hidden__menu__item theme">
+              Тема
+              <div class="change__theme">
+                <div class="theme__changer">
+                  <i class="bi bi-moon"></i>
+                </div>
+              </div>
+            </li>
+            <li class="separator"><span></span></li>
+            <li class="header__hidden__menu__item">
+              Язык
+            </li>
+            <li class="separator"><span></span></li>
+            <li class="header__hidden__menu__item">
+              Профиль
+            </li>
+          </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Close -->
 
-  <!-- Главный блок, сюда будет подставлятся контент в зависимости от страницы! {% block main %}{% endblock %} -->
-  {% block main %}{% endblock %}
-  </main>
-  <footer class="footer">
-      <div class="footer-content">
-        <h3>text</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione quo fugit, dignissimos dicta corrupti, nihil, minus debitis consequatur praesentium adipisci at distinctio delectus. Tempore, aspernatur quod, ullam similique libero unde.</p>
-        <ul class="socials">
-          <li><a href=""><i class="bi bi-discord"></i></a></li>
-          <li><a href=""><i class="bi bi-youtube"></i></a></li>
-          <li><a href=""><i class="bi bi-github"></i></a></li>
-        </ul>
-      </div>
-      <div class="footer-bottom">
-        <p>copyright &copy;2022 <a class="developers" href="#">Библиотекари</a>. designed by <a class="developers" href="https://discord.com/users/686207718822117463">Ята</a></p>
-      </div>
+        <div class="container">
+          <!-- {% block main__container %}{% endblock %} -->
+
+        </div>
+    </main>
+
+
+    <footer class="footer">
+        <div class="footer-content">
+          <h3>text</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione quo fugit, dignissimos dicta corrupti, nihil, minus debitis consequatur praesentium adipisci at distinctio delectus. Tempore, aspernatur quod, ullam similique libero unde.</p>
+          <ul class="socials">
+            <li><a href=""><i class="bi bi-discord"></i></a></li>
+            <li><a href=""><i class="bi bi-youtube"></i></a></li>
+            <li><a href=""><i class="bi bi-github"></i></a></li>
+          </ul>
+        </div>
+        <div class="footer-bottom">
+          <p>copyright &copy;2022. Разработано и контролируется <a class="developers" href="#">Библиотекари</a>. designed by <a class="developers" href="https://discord.com/users/686207718822117463">Ята</a></p>
+        </div>
     </footer>
-    <div class='stt scrollUp'><i class="scrollUp bi bi-arrow-up-circle-fill"></i></div>
+  <div class='scrollUp'><i class="scrollUp bi bi-arrow-up-circle-fill"></i></div>
   </div>
-
-  <script type="text/javascript" src="static/main.js"></script>
 </body>
 </html>

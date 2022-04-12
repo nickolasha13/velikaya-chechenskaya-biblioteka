@@ -1,0 +1,371 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+html,
+body {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../img/reg__page__bg.png');
+  background-size: cover;
+  background-repeat: repeat-y;
+  transition: all 0.3s ease;
+}
+
+.container {
+  position: relative;
+  min-width: 440px;
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  opacity: 0.96;
+}
+
+.container .forms {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  height: 440px;
+  width: 200%;
+  /* background-color: red; */
+  transition: all 0.2s ease;
+}
+
+.container.active .forms {
+  height: 650px;
+}
+
+.container.active .login {
+  opacity: 0;
+  margin-left: -50%;
+  transition: margin-left 0.18s ease, opacity 0.15s ease;
+}
+
+.container .signup {
+
+  opacity: 0;
+  transition: opacity 0.09s ease;
+}
+.container.active .signup {
+  transition: opacity 0.2s ease;
+  opacity: 1;
+}
+
+.container.forms {
+  padding: 30px;
+  width: 50%;
+}
+
+.container .form {
+  width: 50%;
+  padding: 30px;
+  background-color: #fff;
+  transition: margin-left 0.18s ease;
+}
+
+.container .form .title {
+  position: relative;
+  font-size: 27px;
+  font-weight: 600;
+
+}
+
+.form .title::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 34px;
+  background-color: var(--light-blue);
+  border-radius: 25px;
+}
+
+
+
+.form .input__field.active__validator {
+  margin-top: 47px;
+}
+
+.form .input__field {
+  margin-top: 25px;
+  position: relative;
+  height: 50px;
+  width: 100%;
+  transition: all 0.3s ease;
+
+}
+
+.input__field input {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding: 0 35px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #ccc;
+  border-top: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.input__field input:is(:focus, :valid) {
+  border-bottom-color: #4070f4;
+}
+
+.input__field input:is(:focus, :valid) ~ i.icon {
+  color: #4070f4;
+}
+
+/* Validation */
+.validator {
+  transition: all 0.3s ease;
+  font-size: 16px;
+  position: relative;
+}
+
+#name_validator {
+  display: none;
+}
+
+#email_validator {
+  display: none;
+}
+
+#password_validator {
+  display: none;
+}
+
+#password_c_validator {
+  display: none;
+}
+
+.name_validator {
+  position: absolute;
+}
+
+.email_validator {
+  position: absolute;
+}
+
+.password_validator {
+  position: absolute;
+}
+
+.not__to__see {
+  display: none;
+}
+
+.visible {
+  position: absolute;
+  display: flex;
+}
+
+.wrong p, .wrong i {
+  color: red;
+}
+
+.correct {
+  border-bottom-color: green;
+}
+
+.input__field i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: 23px;
+  transition: all 0.2s ease;
+}
+
+.input__field i.icon {
+
+  left: 0;
+}
+
+.input__field i.password__show {
+  right: 0;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.form .checkbox-text {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.form .checkbox-text.active__validator {
+  margin-top: 45px;
+}
+
+.checkbox-text .checkbox-content {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-content input {
+  margin: 0 8px -1px 4px;
+  accent-color: #4070f4;
+}
+
+.form .cext {
+  color: #333;
+  font-size: 14px;
+}
+
+.form a.text {
+  color: #4070f4;
+  text-decoration: none;
+
+}
+.form a:hover {
+  text-decoration: underline;
+}
+
+.form .button {
+  margin-top: 35px;
+
+}
+
+.form .button input {
+  border: none;
+  color: #fff;
+  letter-spacing: 1px;
+  border-radius: 6px;
+  font-size: 17px;
+  font-weight: 500;
+  background-color: #4070f4;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  opacity: 1;
+}
+
+.button input:hover {
+  background-color: #265df2;
+}
+
+.form .login-signup {
+  margin-top: 30px;
+  text-align: center;
+}
+
+
+@media (max-width: 767px) {
+  .container.active .forms {
+    height: 900px;
+    overflow: scroll;
+  }
+  .form .input__field.active__validator {
+    margin-top: 57px;
+  }
+  .form .checkbox-text.active__validator {
+    padding-top: 80px;
+  }
+  .container {
+    max-width: 330px;
+  }
+
+  .container .form .title {
+    font-size: 25px;
+
+  }
+  .form .button {
+    margin-top: 27px;
+
+  }
+
+}
+
+@media (max-width: 450px) {
+  .container {
+    min-width: 270px;
+  }
+
+  .container .form .title {
+    font-size: 23px;
+
+  }
+  .form .input__field.active__validator {
+    margin-top: 100px;
+  }
+
+  .form .button input {
+    font-size: 15px;
+  }
+  .input__field input {
+    padding: 0 27px;
+    font-size: 15px;
+  }
+  .form .input__field {
+    margin-top: 25px;
+    height: 40px;
+    width: 100%;
+
+  }
+}
+
+@media (max-width: 319px) {
+  .container {
+    max-width: 250px;
+  }
+
+  .container .form .title {
+    font-size: 20px;
+
+  }
+  .form .button input {
+    font-size: 14px;
+  }
+  .input__field input {
+    padding: 0 24px;
+    font-size: 14px;
+  }
+  .form .input__field {
+    margin-top: 20px;
+    height: 40px;
+
+  }
+}
+
+/* @media (max-width: 767px) {
+  .container.active .forms {
+    height: 750px;
+  }
+  .form .input__field.active__validator {
+    margin-top: 57px;
+  }
+  .form .checkbox-text.active__validator {
+    padding-top: 80px;
+  }
+}
+
+@media (max-width: 500px) {
+  .container.active .forms {
+    height: 750px;
+  }
+  .form {
+    max-width: 200px;
+    min-width: 200px;
+    width: 200px;
+  }
+  .form .input__field.active__validator {
+    margin-top: 57px;
+  }
+  .form .checkbox-text.active__validator {
+    padding-top: 80px;
+  }
+} */

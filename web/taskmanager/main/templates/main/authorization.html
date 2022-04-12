@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Icons and fonts -->
+  <link rel="stylesheet" href="static\icons\bi.css"> <!-- Иконки -->
+
+  <!-- Шрифты с гугла -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="static\css\main.css">
+  <link rel="stylesheet" href="static\css\reg_page.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+  <script type="text/javascript" src="static\js\reg_page.js"></script>
+
+  <script type="text/javascript">
+    console.log("%cИ что же обычный пользователь тут ищет?)🤨", "font-size: 46px; color: #00075");
+  </script>
+
+  <title>{{ page__title }}</title>
+</head>
+<body>
+  <div class="page__wrapper">
+
+    <div class="form__background"></div>
+    <div class="container active">
+      <div class="forms">
+        <div class="form login">
+          <span class="title">Вход</span>
+          <form action="/login" method="post">
+            <div class="input__field">
+              <input type="text" placeholder="Введите ваш имейл" required>
+              <i class="bi bi-envelope icon"></i>
+            </div>
+            <div class="input__field">
+              <input class="password__input_box" type="password" placeholder="Введите пароль" required>
+              <i class="bi bi-lock-fill icon"></i>
+              <i class="bi bi-eye-slash password__show" id="password__show__icon__2"></i>
+            </div>
+
+            <div class="checkbox-text">
+              <div class="checkbox-content">
+                <input type="checkbox" id="logCheck">
+                <label for="logCheck" class="text">Запомнить меня</label>
+              </div>
+              <a href="#">Забыли пароль?</a>
+            </div>
+            <div class="input__field button">
+              <input type="submit" value="Войти">
+            </div>
+          </form>
+          <div class="login-signup">
+            <span>Не зарегестрированы?
+              <a href="" class="text signup-link">Создать аккаунт!</a>
+            </span>
+          </div>
+        </div>
+
+        <!-- Registration form -->
+        <div class="form signup">
+          <span class="title">Регистрация</span>
+          <form class="form__signup" action="/registration" method="post">
+
+            <div class="input__field" id="input__field__name">
+              <input type="text" placeholder="Введите ваше имя" required id="validation__name__field">
+              <i class="bi bi-person icon"></i>
+            </div>
+            <!-- Name validator -->
+            <div id="name_validator" class="validator name__validator wrong">
+              <i class="bi bi-x-lg"></i><p>Длинна имени от 3-х до 16 символов, нельзя использовать цифры, кирилицу и спец. символы.</p>
+            </div>
+
+            <div class="input__field" id="input__field__email">
+              <input type="text" placeholder="Введите ваш имейл" required id="validation__email__field">
+              <i class="bi bi-envelope icon"></i>
+            </div>
+
+            <!-- Email validator -->
+            <div id="email_validator" class="validator email__validator wrong">
+              <i class="bi bi-x-lg"></i><p>Адресс электронной почты должен содержать имя, @ и домен. Например: slavebot.corp@gmail.com</p>
+            </div>
+
+            <div class="input__field" id="input__field__password">
+              <input class="password__input_box" type="password" placeholder="Введите пароль" required id="validation__password__field">
+              <i class="bi bi-lock icon"></i>
+            </div>
+
+            <!-- Password validator -->
+            <div id="password_validator" class="validator password__validator wrong">
+              <i class="bi bi-x-lg"></i><p>Длинна пароля от 8 до 32 символов, разный регистр символов, наличие букв, цифр и специальных знаков.</p>
+            </div>
+
+            <div class="input__field" id="input__field__password__confirmation">
+              <input class="password__input_box" type="password" placeholder="Повтор пароля" required id="validation__password__confirmation__field">
+              <i class="bi bi-lock-fill icon"></i>
+              <i class="bi bi-eye-slash password__show" id="password__show__icon__1"></i>
+            </div>
+
+            <!-- Password confirmation validator -->
+            <div id="password_c_validator" class="validator password_c__validator wrong">
+              <i class="bi bi-x-lg"></i><p>Пароли не совпадают, чуть правее есть кнопка - попробуйте использовать её.</p>
+            </div>
+
+            <div class="checkbox-text">
+              <div class="checkbox-content">
+                <input type="checkbox" id="logCheck" required>
+                <label for="logCheck" class="text">Я соглашаюсь с <a href="" class="text">политикой данного ресурса.</a></label>
+              </div>
+            </div>
+            <div class="input__field button" id="registration__submit__button">
+              <input type="submit" value="Зарегестрироваться" aria-labelledby="Зарегестрироваться">
+            </div>
+          </form>
+          <div class="login-signup">
+            <span>Уже есть аккаунт?
+              <a href="" class="text login-link">Войти!</a>
+            </span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <p class="not__to__see">Незаполненых полей: | заполните их пожалуйста!</p>
+</body>
+</html>
