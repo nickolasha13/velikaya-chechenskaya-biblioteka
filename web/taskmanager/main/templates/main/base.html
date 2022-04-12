@@ -7,14 +7,38 @@
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" /> -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css" integrity="sha384-ejwKkLla8gPP8t2u0eQyL0Q/4ItcnyveF505U0NIobD/SMsNyXrLti6CWaD0L52l" crossorigin="anonymous">
   <link rel="stylesheet" href="static/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <title>Главная страница</title>
 </head>
 <body>
   <div class="wrapper">
     <header class="header">
-      header
+
+      <a href="#" class="logo"><img src="static/img/logo.png" alt="Библиотека" class="logo"></a>
+
+      <ul class="navigation">
+        <li class="nav-element"><a href="" class="nav-element">Item</a></li>
+        <li class="nav-element"><a href="" class="nav-element">Item</a></li>
+        <li class="nav-element"><a href="" class="nav-element">Item</a></li>
+        <li class="nav-element"><a href="" class="nav-element">Itemf</a></li>
+      </ul>
+
+      <!-- Условие типа если юзер авторизован - показывается кнопка профиля иначе кнопка регистрации/авторизации -->
+
+      <div class="accounts">
+        <button class="reg accounts"><a href="#" class="reg accounts">Регистрация</a></button>
+        <button class="auth accounts"><a href="#" class="auth accounts">Авторизация</a></button>
+
+        <button class="profile accounts"><a href="#" class="profile accounts">Мой Профиль</a></button>
+      </div>
     </header>
-  <main class="main"> </main>
+  <main class="main">
+
+  <!-- Главный блок, сюда будет подставлятся контент в зависимости от страницы! {% block main %}{% endblock %} -->
+  {% block main %}{% endblock %}
+  </main>
   <footer class="footer">
       <div class="footer-content">
         <h3>text</h3>
@@ -26,10 +50,12 @@
         </ul>
       </div>
       <div class="footer-bottom">
-        <p>copyright &copy;2022 bibliotekary. designed by <a class="designer" href="https://discord.com/users/686207718822117463">Ята</a></p>
+        <p>copyright &copy;2022 <a class="developers" href="#">Библиотекари</a>. designed by <a class="developers" href="https://discord.com/users/686207718822117463">Ята</a></p>
       </div>
     </footer>
+    <div class='stt scrollUp'><i class="scrollUp bi bi-arrow-up-circle-fill"></i></div>
   </div>
+
   <script type="text/javascript" src="static/main.js"></script>
 </body>
 </html>
