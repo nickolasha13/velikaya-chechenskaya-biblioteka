@@ -1,0 +1,117 @@
+main: {
+  home page, contacts page, about page, news page.
+
+  models: {
+    news{
+      1. title,
+      2. link to youtube,
+      3. description,
+      4. preview,
+      5. youtuber name,
+    }
+  }
+  pages: {
+    home page {
+      title + text
+
+      banner starts + weapon stars
+
+
+    }
+    contacts page {
+      youtubers list + contacts
+    }
+
+    about page {
+      developers and designers
+    }
+
+    news page {
+      project news
+      game news
+      youtuber news
+    }
+
+  }
+
+}
+
+users: {
+  auth page, reg page, profile page
+
+  models: {
+    user {
+      login,
+      password,
+      email,
+      data file,
+
+      is_youtuber,
+      is_developer,
+
+      reg date,
+
+      is_superuser,
+      is_active,
+    }
+  }
+}
+
+
+
+weapons: {
+  all weapons(main page), weapon page
+
+  models: {
+    weapon {
+      name,
+      info text,
+      quality(stars) - manytomany,
+      weapon png,
+      in-game description,
+
+      atk,
+      secondary-stat,
+      passive
+    },
+    quality {
+      quality: 3-4-5
+    }
+  }
+
+}
+
+# персы
+characters: {
+  all characters page, guide page, roster page
+
+  models: {
+    character {
+      name,
+      quality - quality__manyToMany,
+      element - element__manyToMany,
+      region - region__manyToMany,
+      weapon-type - weapon__manyToMany,
+
+      guide block - oneToOne,
+
+      in-game description,
+
+      // возможно
+      link to discord fan server - link
+
+    }
+
+    quality {}
+
+    element {}
+
+    region {}
+
+    weapon-type {}
+
+    roster {}
+  }
+
+
+}
