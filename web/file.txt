@@ -9,7 +9,16 @@ main: {
       4. preview,
       5. youtuber name,
     }
+
+    youtuber {
+      name,
+      youtube-link,
+
+      json-file - with contacts (trovo, twitter, discord)
+
+    }
   }
+
   pages: {
     home page {
       title + text
@@ -73,6 +82,7 @@ weapons: {
       atk,
       secondary-stat,
       passive
+      is_in_banner: boolean
     },
     quality {
       quality: 3-4-5
@@ -99,6 +109,8 @@ characters: {
 
       // возможно
       link to discord fan server - link
+
+      is_in_banner: boolean
 
     }
 
