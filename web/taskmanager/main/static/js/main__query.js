@@ -4,6 +4,7 @@ $(document).ready(function() {
   $(".header__burger").click(function(event) {
     $(".header__burger, .header__menu").toggleClass("active");
     $('body').toggleClass('lock');
+    $(".scrollUp").fadeOut()
   });
 
   // Изменение темы
@@ -15,20 +16,30 @@ $(document).ready(function() {
     theme__changer_icon.toggleClass('bi-brightness-high');
   });
 
+  // FIIIIX THIIIS FUCKING BUUUG
   // Появляющаяся кнопка прокрутки вверх
+  function closeSideMenu() {
+    let menu__icon = $("#settings__block")
+
+    menu__icon.removeClass("settings__active__icon");
+    let icon = $("#settings__block i")
+    icon.removeClass("bi-gear-fill")
+    icon.addClass("bi-gear")
+
+    $("div#aside__settings.settings__aside").removeClass("menu__active");
+  }
+
   const icon__settings = $("#menu__settings")
   const settings__menu = $("div#aside__settings.settings__aside")
   $(window).scroll(function(){
     const scrollUp = $('.scrollUp')
     if($(this).scrollTop() > 100){
       scrollUp.fadeIn()
-      settings__menu.removeClass("menu__active")
-      icon__settings.removeClass("rotate")
+      closeSideMenu()
     }
     else {
       scrollUp.fadeOut()
-      settings__menu.removeClass("menu__active")
-      icon__settings.removeClass("rotate")
+      closeSideMenu()
     }
   });
 

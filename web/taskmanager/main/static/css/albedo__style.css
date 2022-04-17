@@ -1,0 +1,22 @@
+
+.grid {
+  padding: 1em;
+}
+
+.grid-inner {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -0.5em;
+}
+
+
+.item {
+  float: 1 1 100%;
+  padding: 0.5em;
+}
+
+.item-inner {
+  background-size: cover;
+  background-image:  url('../img/reg__page__bg.png');
+  padding-top: calc(100% / (16/90));
+}

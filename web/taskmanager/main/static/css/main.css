@@ -59,14 +59,18 @@ html, body {
   height: 90px;
 }
 
-.page__wrapper {
+.wrapper {
+  display: -webkit-flex;
+  display: -ms-flex;
   display: flex;
   flex-direction: column;
+  min-height: 100%;
 }
+
+
 
 main {
   flex: 1 1 auto;
-  /* height: 200vh; */
 }
 
 /* scrollTopButton */
@@ -75,11 +79,26 @@ main {
   font-size: 2.4rem;
   margin-bottom: 20px;
   margin-right: 20px;
-  color: var(--blue);
+  color: var(--primary);
   position: fixed;
   z-index: 50;
   bottom: 0;
   right: 0;
   display: none;
   cursor: pointer;
+}
+
+.scrollUp.hide {
+  display: none;
+}
+
+.content {
+  padding: calc(var(--header-height) + 20px) 0px calc(var(--header-height) - 20px) 0px;
+}
+
+
+@media (max-width: 767px) {
+  .content {
+    padding: calc(var(--header-height-mobile) + 20px) 0px calc(var(--header-height-mobile) - 20px) 0px;
+  }
 }

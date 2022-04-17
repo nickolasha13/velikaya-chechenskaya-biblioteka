@@ -1,0 +1,148 @@
+main: {
+  home page, contacts page, about page, news page.
+
+  models: {
+    news{
+      1. title,
+      2. link to youtube,
+      3. description,
+      4. preview,
+      5. youtuber name,
+
+      6. category
+    }
+
+    # Категории для модели выше.
+    site_news {}
+
+    youtube videos {}
+
+    game_news {}
+
+    youtuber {
+      name,
+      youtube-link,
+
+      json-file - with contacts (trovo, twitter, discord)
+
+    }
+
+    version {
+      number: float = 2.6 (пример)
+
+      short__text: str = Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+      background__image = картинка версии
+
+      is_going: boolean
+    }
+  }
+
+  pages: {
+    home page {
+      title + text
+
+      banner starts + weapon stars
+
+
+    }
+    contacts page {
+      youtubers list + contacts
+    }
+
+    about page {
+      developers and designers
+    }
+
+    news page {
+      project news
+      game news
+      youtuber news
+    }
+
+  }
+
+}
+
+users: {
+  auth page, reg page, profile page
+
+  models: {
+    user {
+      login,
+      password,
+      email,
+      data file,
+
+      is_youtuber,
+      is_developer,
+
+      reg date,
+
+      is_superuser,
+      is_active,
+    }
+  }
+}
+
+
+
+weapons: {
+  all weapons(main page), weapon page
+
+  models: {
+    weapon {
+      name,
+      info text,
+      quality(stars) - manytomany,
+      weapon png,
+      in-game description,
+
+      atk,
+      secondary-stat,
+      passive
+      is_in_banner: boolean
+    },
+    quality {
+      quality: 3-4-5
+    }
+  }
+
+}
+
+# персы
+characters: {
+  all characters page, guide page, roster page
+
+  models: {
+    character {
+      name,
+      quality - quality__manyToMany,
+      element - element__manyToMany,
+      region - region__manyToMany,
+      weapon-type - weapon__manyToMany,
+
+      guide block - oneToOne,
+
+      in-game description,
+
+      // возможно
+      link to discord fan server - link
+
+      is_in_banner: boolean
+
+    }
+
+    quality {}
+
+    element {}
+
+    region {}
+
+    weapon-type {}
+
+    roster {}
+  }
+
+
+}

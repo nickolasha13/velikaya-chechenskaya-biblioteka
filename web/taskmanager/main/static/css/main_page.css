@@ -1,0 +1,482 @@
+.content {
+  padding: 0;
+}
+
+.main__page__padding {
+  padding: calc(var(--header-height)) 0px 0px 0px;
+}
+
+@media (max-width: 767px) {
+  .main__page__padding {
+    padding: calc(var(--header-height-mobile)) 0px 0px 0px;
+  }
+}
+
+.version {
+  position: relative;
+}
+
+.version__display {
+  position: relative;
+  min-height: 100vh;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+}
+
+.version__display__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.version__vis {
+  padding: 50px 15px;
+  background-color: rgba(0, 0, 0, 0.281);
+  color: #fff;
+  position: relative;
+  z-index: 2;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex: 1 1 auto;
+  -ms-align-items: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+.button__scroll__down__block {
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 10px 18px;
+  margin-top: 25%;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.button__scroll__down {
+  color: #333;
+  font-size: 36px;
+}
+
+.version__title {
+  font-style: italic;
+  letter-spacing: 10px;
+  font-size: 50px;
+  font-weight: 700;
+  margin: 0px 0px 20px 0px;
+}
+
+.version__text {
+  justify-content: center;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 1px;
+  max-width: 72vw;
+}
+
+.mnu__separator {
+  margin: auto;
+  height: 7px;
+  /* background: linear-gradient(45deg, #00c3ff, #ffff1c); */
+  /* animation: gradient__sepa 0.3s linear 0s infinite forwards; */
+  /* transition: all 0.5s linear; */
+}
+
+.mnu__separator.big {
+  margin-top: 30px;
+  border-top: 3px solid #333;
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+}
+
+.mnu__separator.big:hover {
+  border-color: #fff;
+}
+
+.mnu__separator.bigger {
+  height: 150px;
+}
+
+
+/* About current wishes */
+.current__wishes__about {
+  margin-top: 20px;
+  background-color: rgba(0, 0, 0, 0.25);
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  text-align: center;
+  padding: 0px 10px 20px 10px;
+}
+
+.current__wishes__about h1 {
+  font-size: 36px;
+  font-style: italic;
+  font-weight: 800;
+  color: #333;
+}
+
+.current__wishes__about p {
+  margin: 10px 0px 0px 0px;
+  line-height: 150%;
+  font-size: 18px;
+}
+
+/* Current wishes GRID */
+
+.current__wishes {
+  max-width: 1680px;
+  background-color: #fff;
+  margin: auto auto 50px auto;
+  padding: 0px 10px;
+  min-height: 500px;
+}
+
+.current__character__wishes {
+  display: grid;
+  grid-gap: 16px;
+  padding: 16px;
+  /* grid-template-columns: repeat(4, 1fr); */
+}
+
+
+.current__character__wishes .col {
+  box-shadow: 5px 7px 10px rgba(0, 0, 0, 0.1);
+  max-width: 332px;
+  background-color: rgba(223, 254, 243, 0.95);
+  margin: auto auto 16px auto;
+  padding: 16px;
+  /* align-self: start; */
+  border-radius: 12px;
+  border: 2px solid rgba(0, 0, 0, 0);
+}
+
+.col.fostar {
+  border-color: violet;
+}
+
+.col.fistar {
+  border-color: gold;
+}
+
+.col .char__image {
+  width: 300px;
+  height: 300px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.col .char__image:hover {
+  transform: scale(0.978);
+  /* transform: scale(10); */
+}
+
+.col .name {
+  text-transform: capitalize;
+  display: flex;
+  margin: 20px 0px 5px 10px;
+}
+
+.col .description__block {
+  margin: 15px 0px 10px 10px;
+}
+
+.quality__picture {
+  height: 40px;
+  margin: -10px 0px -20px 0px;
+
+
+}
+
+.col .guides__block {
+  width: 50%;
+  margin: 15px 10px 10px -5px;
+  display: flex;
+}
+
+.guides__block .guide__button {
+  text-align: center;
+  /* border: 1px solid #fff; */
+  background: #fff;
+  color: #000;
+  margin: 0% 5%;
+  padding: 3% 30% 3% 30%;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  border: 3px solid rgba(0, 0, 0, 0.00);
+  font-style: oblique;
+  font-weight: 500;
+}
+
+.guide__button:hover {
+  background: #333;
+  color: #fff;
+  border: 3px solid #fff;
+}
+
+.guide__button.calc {
+  /* margin-left: 10%; */
+  background: #333;
+  color: #fff;
+}
+
+.guide__button.calc:hover {
+  background: #fff;
+  color: #333;
+  border: 3px solid #333;
+}
+
+.description__block p {
+  font-size: 14px;
+}
+
+.name h2 {
+  font-size: 24px;
+}
+
+.name img.icon {
+  margin-left: 8px;
+}
+
+/* Weapons text block */
+.weapons__text {
+  background-color: rgba(0, 0, 0, 0.281);
+  border-radius: 12px;
+  max-width: 100%;
+}
+
+.weapons__description {
+  display: grid;
+  height: 100%;
+  overflow: hidden;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+
+
+.weapons__text__block {
+  margin: 50px;
+  height: 90%;
+  padding-top: 10px;
+}
+
+.weapons__text__block .text__block {
+  color: #fff;
+  line-height: 180%;
+  margin: 20px 0px 0px 0px;
+
+}
+
+.title__block h1 {
+  color: #333;
+  font-style: oblique;
+  font-size: 36px;
+  font-weight: 800;
+}
+
+.text__block p {
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* Wrapons col */
+.current__weapon__wishes {
+  display: grid;
+  grid-gap: 16px;
+  padding: 16px;
+  /* grid-template-columns: repeat(4, 1fr); */
+}
+
+.current__weapon__wishes .weapon__col {
+  box-shadow: 5px 7px 10px rgba(0, 0, 0, 0.1);
+  max-width: 332px;
+  background-color: rgba(223, 254, 243, 0.95);
+  margin: auto auto 16px auto;
+  padding: 16px;
+  /* align-self: start; */
+  border: 3px solid rgba(0, 0, 0, 0);
+  border-radius: 12px;
+}
+
+.weapon__col.fostar {
+  border-color: violet;
+}
+
+.weapon__col.fistar {
+  border-color: gold;
+}
+
+
+.weapon__image {
+  height: 300px;
+  width: 300px;
+  border-radius: 12px;
+
+}
+
+.weapon__image:hover {
+  transform: scale(0.978);
+}
+
+.weapon__name h2 {
+  text-transform: capitalize;
+  display: flex;
+  margin: 20px 0px 5px 10px;
+}
+
+.weapon__name img {
+  margin: 0px 0px 0px 10px;
+  transform: translateX(-5px);
+}
+
+.weapon__stats {
+  margin: 0px 5px 5px 10px;
+}
+
+.weapon__desc {
+  margin: 0px 0px 5px 10px;
+}
+
+@media (min-width: 1200px) {
+  .current__character__wishes, .current__weapon__wishes{
+    grid-template-columns: repeat(4, 1fr);
+
+  }
+}
+
+@media (max-width: 1429px) {
+  .current__character__wishes, .current__weapon__wishes {
+    grid-template-columns: repeat(3, 1fr);
+
+  }
+  .current__character__wishes .col, .current__weapon__wishes .weapon__col {
+    max-width: 380px;
+  }
+  .col .char__image {
+    width: 330px;
+    height: 330px;
+
+  }
+}
+
+@media (max-width: 1153px) {
+  .current__character__wishes .col, .current__weapon__wishes .weapon__col {
+    max-width: 330px;
+  }
+  .col .char__image {
+    width: 300px;
+    height: 300px;
+
+  }
+  .weapons__description {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 1073px) {
+  .current__character__wishes, .current__weapon__wishes {
+    grid-template-columns: repeat(2, 1fr);
+
+  }
+}
+
+@media (max-width: 727px) {
+  .current__character__wishes, .current__weapon__wishes {
+    grid-template-columns: repeat(1, 1fr);
+
+  }
+}
+
+@media (max-width: 727px) {
+  .current__character__wishes, .current__weapon__wishes {
+    grid-template-columns: repeat(1, 1fr);
+
+  }
+  .current__character__wishes .col, .current__weapon__wishes .weapon__col {
+    margin: 0 auto;
+  }
+}
+
+
+@media (max-width: 390px) {
+  .weapons__text {
+    max-width: 300px;
+  }
+  .current__character__wishes .col, .current__weapon__wishes .weapon__col {
+    margin: 0 auto;
+    max-width: 250px;
+  }
+
+  .col .char__image, .weapon__col .weapon__image {
+    margin: 12px 12px;
+    width: 200px;
+    height: 200px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border-radius: 12px;
+  }
+
+  .col .char__image:hover, .weapon__col .weapon__image:hover {
+    transform: scale(1.078);
+    /* transform: scale(10); */
+  }
+
+  .col .guides__block {
+    width: 50%;
+    margin: 15px 10px 10px -5px;
+    display: flex;
+  }
+
+  .guides__block .guide__button {
+    text-align: center;
+    /* border: 1px solid #fff; */
+    background: #fff;
+    color: #000;
+    margin: 0% 5%;
+    padding: 3% 15% 3% 15%;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    border: 3px solid rgba(0, 0, 0, 0.00);
+    font-style: oblique;
+    font-weight: 500;
+  }
+
+  .guide__button:hover {
+    background: #333;
+    color: #fff;
+    border: 3px solid #fff;
+  }
+
+  .guide__button.calc {
+    /* margin-left: 10%; */
+    background: #333;
+    color: #fff;
+  }
+
+  .guide__button.calc:hover {
+    background: #fff;
+    color: #333;
+    border: 3px solid #333;
+  }
+
+  .description__block p {
+    font-size: 14px;
+  }
+
+  .name h2 {
+    font-size: 24px;
+  }
+
+  .name img.icon {
+    margin-left: 8px;
+  }
+}
