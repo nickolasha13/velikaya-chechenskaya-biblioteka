@@ -1,0 +1,236 @@
+{% extends 'main/base.html' %}
+
+
+
+{% block static %}
+    <link rel="stylesheet" href="static\css\main_page.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="static\js\main_page.js"></script>
+
+{% endblock %}
+
+{% block main__container %}
+          <div class="main__block">
+          <div class="version">
+            <div class="version__display">
+              <div class="version__vis">
+                <div class="version__title">
+                    {{ version.number }}
+                </div>
+                <div class="version__text">
+                    {{ version.short_text }}
+                </div>
+                <div class="button__scroll__down__block"><a href="" class="button__scroll__down"><i class="bi bi-arrow-down"></i></a></div>
+              </div>
+                <img src="{{ version.background_image }}" alt="" class="version__display__video poster__for__main__page">
+              <!--<video id="main__display__web" poster="static\img\current_version\art.png" preload="auto" autoplay muted loop class="version__display__video">
+
+                <source src="static\img\current_version\bg.webm" type="video/webm" id="video__source__1">
+                <source src="static\img\current_version\bg.mp4" type="video/mp4" id="video__source__2">
+              </video>-->
+            </div>
+            <div class="version__content">
+              <div class="mnu__separator"></div>
+
+              <!-- Some content? -->
+              <!-- <div class="mnu__separator"></div> -->
+              <div class="current__wishes">
+                <div class="current__wishes__about">
+                  <h1>Title txt</h1>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus et tenetur voluptate suscipit officia nisi impedit eius laboriosam exercitationem cupiditate corrupti veniam sequi voluptas omnis optio, nam ipsum, iste non.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque aliquam ad ducimus vero pariatur molestias autem id commodi sunt voluptatum! Modi vero voluptate eveniet nam quis fugit enim! Facilis, et.</p>
+                </div>
+                <div class="mnu__separator big"></div>
+                <div class="current__character__wishes">
+
+                  <!-- cols -->
+                  <div class="col fostar">
+                    <img class="char__image" src="static\img\albedo\albedo_1.png" alt="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam debitis veritatis, quos quae ex, eos molestias impedit officia hic iusto, distinctio id, culpa aperiam blanditiis tenetur doloremque minus! Nemo, molestias!">
+                    <!-- <img src="https://craftypixels.com/placeholder-image/300.png/09f/fff" alt=""> -->
+
+                    <div class="name">
+                      <h2>name</h2>
+                      <img class="icon" src="static\icons\Electro__icon.png" alt="" width="32" style="">
+
+                    </div>
+                    <div class="quality__block">
+                      <img src="static\icons\5star.png" alt="Редкость персонажа" class="quality__picture">
+                    </div>
+                    <div class="description__block">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus qui, voluptatibus distinctio veritatis, voluptatum veniam dolor tempore ab, nemo maxime vitae? Eos provident iste, soluta eveniet cum vero. Dignissimos, perferendis.</p>
+                    </div>
+                    <div class="guides__block">
+                      <a href="#" class="guide__button">guide</a>
+                      <a href="#" class="guide__button calc">guide</a>
+                    </div>
+                  </div>
+
+                  <div class="col fistar">
+                    <img class="char__image" src="static\img\keq.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam debitis veritatis, quos quae ex, eos molestias impedit officia hic iusto, distinctio id, culpa aperiam blanditiis tenetur doloremque minus! Nemo, molestias!">
+                    <!-- <img src="https://craftypixels.com/placeholder-image/300.png/09f/fff" alt=""> -->
+
+                    <div class="name">
+                      <h2>name</h2>
+                      <img class="icon" src="static\icons\Electro__icon.png" alt="" width="32" style="">
+
+                    </div>
+                    <div class="quality__block">
+                      <img src="static\icons\5star.png" alt="Редкость персонажа" class="quality__picture">
+                    </div>
+                    <div class="description__block">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus qui, voluptatibus distinctio veritatis, voluptatum veniam dolor tempore ab, nemo maxime vitae? Eos provident iste, soluta eveniet cum vero. Dignissimos, perferendis.</p>
+                    </div>
+                    <div class="guides__block">
+                      <a href="#" class="guide__button">guide</a>
+                      <a href="#" class="guide__button calc">guide</a>
+                    </div>
+                  </div>
+
+                  <!-- /cols -->
+
+
+                </div>
+                <div class="mnu__separator big"></div>
+                <div class="weapons__text">
+
+                    <div class="weapons__description">
+
+                      <div class="weapons__text__block block__1">
+                        <div class="title__block">
+                          <h1>TITLE</h1>
+                        </div>
+                        <div class="text__block">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur fugit vero eum ipsam voluptatem veritatis, officia, dolores eligendi quod blanditiis minima non ipsa eius obcaecati. Veritatis omnis nesciunt libero ipsa?</p>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur fugit vero eum ipsam voluptatem veritatis, officia, dolores eligendi quod blanditiis minima non ipsa eius obcaecati. Veritatis omnis nesciunt libero ipsa?</p>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur fugit vero eum ipsam voluptatem veritatis, officia, dolores eligendi quod blanditiis minima non ipsa eius obcaecati. Veritatis omnis nesciunt libero ipsa?</p>
+
+                        </div>
+                      </div>
+                      <div class="weapons__text__block block__2">
+                        <div class="title__block">
+                          <h1>TITLE</h1>
+                        </div>
+                        <div class="text__block">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur fugit vero eum ipsam voluptatem veritatis, officia, dolores eligendi quod blanditiis minima non ipsa eius obcaecati. Veritatis omnis nesciunt libero ipsa?</p>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur fugit vero eum ipsam voluptatem veritatis, officia, dolores eligendi quod blanditiis minima non ipsa eius obcaecati. Veritatis omnis nesciunt libero ipsa?</p>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur fugit vero eum ipsam voluptatem veritatis, officia, dolores eligendi quod blanditiis minima non ipsa eius obcaecati. Veritatis omnis nesciunt libero ipsa?</p>
+
+                        </div>
+                      </div>
+                      <div class="weapons__text__block block__3">
+                        <div class="title__block">
+                          <h1>TITLE</h1>
+                        </div>
+                        <div class="text__block">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur fugit vero eum ipsam voluptatem veritatis, officia, dolores eligendi quod blanditiis minima non ipsa eius obcaecati. Veritatis omnis nesciunt libero ipsa?</p>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur fugit vero eum ipsam voluptatem veritatis, officia, dolores eligendi quod blanditiis minima non ipsa eius obcaecati. Veritatis omnis nesciunt libero ipsa?</p>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur fugit vero eum ipsam voluptatem veritatis, officia, dolores eligendi quod blanditiis minima non ipsa eius obcaecati. Veritatis omnis nesciunt libero ipsa?</p>
+
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <!-- /Weapons text -->
+                <div class="mnu__separator big"></div>
+
+                <!-- Weapons list -->
+                <div class="current__weapon__wishes">
+                  <!-- Cols -->
+                  <div class="weapon__col fistar">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAUeEONdGU2lhBK2dVet85cQjYJvU1yPBzF1WjQ60zN-sg9Y1Q7Ev9JPK16lbPS6ZISKo&usqp=CAU" alt="" class="weapon__image">
+
+                    <div class="weapon__name">
+                      <h2>Какое-то оружие</h2>
+                      <div class="weapon__stats">
+                        <h3>Атк: 23-723</h3>
+                        <h4>Сила Атаки: 4%-63%</h4>
+                      </div>
+                      <img src="static\icons\5star.png" alt="" class="quality__picture">
+                    </div>
+                    <div class="weapon__desc">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi velit nihil adipisci iusto impedit quibusdam reprehenderit animi. Quo incidunt voluptates ex, fugit explicabo vel excepturi culpa eius at mollitia, commodi.</p>
+                    </div>
+                  </div>
+                  <div class="weapon__col fistar">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAUeEONdGU2lhBK2dVet85cQjYJvU1yPBzF1WjQ60zN-sg9Y1Q7Ev9JPK16lbPS6ZISKo&usqp=CAU" alt="" class="weapon__image">
+
+                    <div class="weapon__name">
+                      <h2>Какое-то оружие</h2>
+                      <div class="weapon__stats">
+                        <h3>Атк: 23-723</h3>
+                        <h4>Сила Атаки: 4%-63%</h4>
+                      </div>
+                      <img src="static\icons\5star.png" alt="" class="quality__picture">
+                    </div>
+                    <div class="weapon__desc">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi velit nihil adipisci iusto impedit quibusdam reprehenderit animi. Quo incidunt voluptates ex, fugit explicabo vel excepturi culpa eius at mollitia, commodi.</p>
+                    </div>
+                  </div>
+                  <div class="weapon__col fistar">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAUeEONdGU2lhBK2dVet85cQjYJvU1yPBzF1WjQ60zN-sg9Y1Q7Ev9JPK16lbPS6ZISKo&usqp=CAU" alt="" class="weapon__image">
+
+                    <div class="weapon__name">
+                      <h2>Какое-то оружие</h2>
+                      <div class="weapon__stats">
+                        <h3>Атк: 23-723</h3>
+                        <h4>Сила Атаки: 4%-63%</h4>
+                      </div>
+                      <img src="static\icons\5star.png" alt="" class="quality__picture">
+                    </div>
+                    <div class="weapon__desc">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi velit nihil adipisci iusto impedit quibusdam reprehenderit animi. Quo incidunt voluptates ex, fugit explicabo vel excepturi culpa eius at mollitia, commodi.</p>
+                    </div>
+                  </div>
+                  <div class="weapon__col fistar">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAUeEONdGU2lhBK2dVet85cQjYJvU1yPBzF1WjQ60zN-sg9Y1Q7Ev9JPK16lbPS6ZISKo&usqp=CAU" alt="" class="weapon__image">
+
+                    <div class="weapon__name">
+                      <h2>Какое-то оружие</h2>
+                      <div class="weapon__stats">
+                        <h3>Атк: 23-723</h3>
+                        <h4>Сила Атаки: 4%-63%</h4>
+                      </div>
+                      <img src="static\icons\5star.png" alt="" class="quality__picture">
+                    </div>
+                    <div class="weapon__desc">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi velit nihil adipisci iusto impedit quibusdam reprehenderit animi. Quo incidunt voluptates ex, fugit explicabo vel excepturi culpa eius at mollitia, commodi.</p>
+                    </div>
+                  </div>
+                  <div class="weapon__col fistar">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAUeEONdGU2lhBK2dVet85cQjYJvU1yPBzF1WjQ60zN-sg9Y1Q7Ev9JPK16lbPS6ZISKo&usqp=CAU" alt="" class="weapon__image">
+
+                    <div class="weapon__name">
+                      <h2>Какое-то оружие</h2>
+                      <div class="weapon__stats">
+                        <h3>Атк: 23-723</h3>
+                        <h4>Сила Атаки: 4%-63%</h4>
+                      </div>
+                      <img src="static\icons\5star.png" alt="" class="quality__picture">
+                    </div>
+                    <div class="weapon__desc">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi velit nihil adipisci iusto impedit quibusdam reprehenderit animi. Quo incidunt voluptates ex, fugit explicabo vel excepturi culpa eius at mollitia, commodi.</p>
+                    </div>
+                  </div>
+                  <div class="weapon__col fostar">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAUeEONdGU2lhBK2dVet85cQjYJvU1yPBzF1WjQ60zN-sg9Y1Q7Ev9JPK16lbPS6ZISKo&usqp=CAU" alt="" class="weapon__image">
+
+                    <div class="weapon__name">
+                      <h2>Какое-то оружие</h2>
+                      <div class="weapon__stats">
+                        <h3>Атк: 23-723</h3>
+                        <h4>Сила Атаки: 4%-63%</h4>
+                      </div>
+                      <img src="static\icons\5star.png" alt="" class="quality__picture">
+                    </div>
+                    <div class="weapon__desc">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi velit nihil adipisci iusto impedit quibusdam reprehenderit animi. Quo incidunt voluptates ex, fugit explicabo vel excepturi culpa eius at mollitia, commodi.</p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+          </div>
+{% endblock %}
