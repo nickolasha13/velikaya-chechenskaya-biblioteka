@@ -1,4 +1,7 @@
 from django.db import models
+from django.core.validators import FileExtensionValidator
+
+
 
 class News(models.Model):
     title = models.CharField(max_length=255, verbose_name="Новость")
@@ -35,6 +38,11 @@ class Version(models.Model):
     number = models.CharField(max_length=10, verbose_name="Версия")
     short_text = models.TextField(blank=True, verbose_name="Статья")
     background_image = models.ImageField(upload_to='photos/%y/%m/%d/', verbose_name="Фон")
+
+    background_video = models.FileField(upload_to="videos/%y/%m/%d/", verbose_name="Видео фон")
+
+    background_video_webp = models.FileField(upload_to="videos/%y/%m/%d/", verbose_name="Видео фон webp", validators=FileExtensionValidator(["webp"]))
+
     is_going = models.BooleanField(default=True, verbose_name="Активна ли")
 
     class Meta:
